@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">SendMeal</string>
+    <string name="FormReg_Name">Nombre y apellido</string>
+    <string name="FormReg_Password">Contraseña</string>
+    <string name="FormReg_RepPass">Repetir Contraseña</string>
+    <string name="FormReg_Mail">Correo electrónico</string>
+    <string name="FormReg_TypeCard">Tipo de tarjeta</string>
+    <string name="FormReg_TypeCard_Opc_Deb">Débito</string>
+    <string name="FormReg_TypeCard_Opc_Cre">Crédito</string>
+    <string name="FormReg_CardNro">Número de tarjeta</string>
+    <string name="FormReg_CardCCV">CCV</string>
+    <string name="FormReg_DateCard">Fecha de vencimiento</string>
+    <string name="FormReg_DateCard_Year">Año</string>
+    <string name="FormReg_DateCard_Month">Mes</string>
+    <string name="FormReg_BankNro">Número CBU</string>
+    <string name="FormReg_BankAlias">Alias CBU</string>
+    <string name="FormReg_InitCharge">¿Realizar carga inicial?</string>
+    <string name="FormReg_InitChargeMount">Crédito inicial: </string>
+    <string name="FormReg_TyC">Acepto los términos y condiciones.</string>
+    <string name="FormReg_Btn">Registrar</string>
 </resources>

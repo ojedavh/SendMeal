@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="FormReg_TypeCard_Opc">1</dimen>
+    <dimen name="FormReg_CardNro">280dp</dimen>
+</resources>
