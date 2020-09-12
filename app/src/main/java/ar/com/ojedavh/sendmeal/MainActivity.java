@@ -112,52 +112,52 @@ public class MainActivity extends AppCompatActivity {
 
 
                 Context context = getApplicationContext();
-                String mensaje = "";
+                String mensaje = "Error en el registro";
                 int duration = Toast.LENGTH_SHORT;
 
                 if(nombre.isEmpty()) {
-                    mensaje =  "El Nombre y Apellido es un campo obligatorio";
                     editText_nombre.requestFocus();
+                    editText_nombre.setError("Campo obligatorio");
                 }
                 else if(mail.isEmpty()) {
-                    mensaje =  "El Correo Electrónico es un campo obligatorio";
                     editText_mail.requestFocus();
+                    editText_mail.setError("Campo obligatorio");
                 }
                 else if(pass.isEmpty()) {
-                    mensaje =  "La Contraseña es un campo obligatorio";
                     editText_pass.requestFocus();
+                    editText_pass.setError("Campo obligatorio");
                 }
                 else if(tarjetaNro.isEmpty()) {
-                    mensaje =  "El número de tarjeta es un campo obligatorio";
                     editText_tarjetaNro.requestFocus();
+                    editText_tarjetaNro.setError("Campo obligatorio");
                 }
                 else if(tarjetaTipo <= 0) {
                     mensaje =  "Debe elegir un tipo de tarjeta";
                     radioGroup_tarjetaTipo.requestFocus();
                 }
                 else if(tarjetaCCV.isEmpty()) {
-                    mensaje =  "El código de verificación es un campo obligatorio";
                     editText_tarjetaCCV.requestFocus();
+                    editText_tarjetaCCV.setError("Campo obligatorio");
                 }
                 else if(tarjetaVenceMes.isEmpty()) {
-                    mensaje =  "El mes de vencimiento es un campo obligatorio";
                     editText_tarjetaVenceMes.requestFocus();
+                    editText_tarjetaVenceMes.setError("Campo obligatorio");
                 }
                 else if(tarjetaVenceAnio.isEmpty()) {
-                    mensaje =  "El año de vancimiento es un campo obligatorio";
                     editText_tarjetaVenceAnio.requestFocus();
+                    editText_tarjetaVenceAnio.setError("Campo obligatorio");
                 }
                 else if (!MailValido(mail)) {
-                    mensaje = "Debe ingresar un correco electrónico válido";
                     editText_mail.requestFocus();
+                    editText_mail.setError("Correo inválido");
                 }
                 else if (!ClaveValida(pass, pass2)) {
-                    mensaje = "Las contraseñas no coinciden";
                     editText_pass2.requestFocus();
+                    editText_pass2.setError("Las contraseñas no coinciden");
                 }
                 else if (!FechaValida(tarjetaVenceMes, tarjetaVenceAnio)) {
-                    mensaje = "La fecha de vencimiento de la tarjeta debe ser mayor a los próximos 3 meses";
                     editText_tarjetaVenceMes.requestFocus();
+                    editText_tarjetaVenceMes.setError("La fecha de vencimiento de la tarjeta debe ser mayor a los próximos 3 meses");
                 }
                 else if (switch_cargaInicial.isChecked() && montoCarga <= 0) {
                     mensaje = "Debe ingresar un monto inicial";
@@ -172,6 +172,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 Toast toast = Toast.makeText(context, mensaje, duration);
+
                 toast.show();
             }
         });
